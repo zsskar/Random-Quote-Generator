@@ -18,3 +18,22 @@ function getQuote(){
         
     });
 }
+
+function copyText(){
+    let copiedText = qtext.innerHTML;
+    navigator.clipboard.writeText(copiedText).then(() =>{
+        alert(`${copiedText}`);
+    },(err) =>{
+        alert("Error while copying the text !");
+    })
+}
+
+
+function startSpeech(){
+    let msg = qtext.innerHTML;
+    let textToSpeech = new SpeechSynthesisUtterance(msg);
+    // textToSpeech.
+    textToSpeech.lang = 'ar-SA';
+    window.speechSynthesis.speak(textToSpeech); 
+    // console.log(window.speechSynthesis.getVoices());
+}
