@@ -6,6 +6,7 @@ h1 {
     border-style: solid;
     margin: 10px 10px 10px 10px;
     width: 100%;
+    border-style: groove;
 }
 .animate-charcter
 {
